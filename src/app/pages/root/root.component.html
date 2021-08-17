@@ -1,0 +1,36 @@
+<mat-drawer-container class="h-100" hasBackdrop="false" autosize>
+    <mat-drawer mode="push" opened>
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="sidenav-button-container" [ngStyle]="{'max-width': expanded ? '20em' : '0'}">
+                <button [ngClass]="{'active-link': isLinkActive('/home')}" mat-button [routerLink]="['/home']"
+                    class="my-1 py-2 w-100" color="primary">Home</button><br />
+                <button [ngClass]="{'active-link': isLinkActive('/my-dashboard')}" mat-button
+                    [routerLink]="['/my-dashboard']" class="my-1 py-2 w-100" color="primary">My
+                    Dashboard</button><br />
+                <button [ngClass]="{'active-link': isLinkActive('/team-dashboard')}" mat-button
+                    [routerLink]="['/team-dashboard']" class="my-1 py-2 w-100" color="primary">Team
+                    Dashboard</button><br />
+                <button [ngClass]="{'active-link': isLinkActive('/org-dashboard')}" mat-button
+                    [routerLink]="['/org-dashboard']" class="my-1 py-2 w-100" color="primary">Org
+                    Dashboard</button><br />
+                <button [ngClass]="{'active-link': isLinkActive('/manage-users')}" mat-button
+                    [routerLink]="['/manage-users']" class="my-1 py-2 w-100" color="primary">Manage
+                    users</button><br />
+            </div>
+            <div>
+                <div class="d-flex justify-content-between mr-2">
+                    <button mat-button class="my-1 w-100 text-danger sidenav-button-container" (click)="logout()" [ngStyle]="{'max-width': expanded ? '20em' : '0'}">
+                        <mat-icon>exit_to_app</mat-icon>
+                        Logout</button>
+                    <button mat-icon-button color="primary" (click)="expanded=!expanded">
+                        <mat-icon>{{expanded ? 'first_page' : 'last_page'}}</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content class="p-2">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

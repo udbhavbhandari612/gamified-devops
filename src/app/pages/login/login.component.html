@@ -1,0 +1,8 @@
+<div class="w-100 h-100 d-flex justify-content-center align-items-center">
+    <mat-card class="p-5">
+        <div class="text-center my-3 mat-h2">Login as :</div>
+        <div *ngFor="let user of users" class="my-2">
+            <button mat-button color="primary" (click)="login(user)">{{user}}</button>
+        </div>
+    </mat-card>
+</div>

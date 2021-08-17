@@ -1,0 +1,13 @@
+.mat-drawer {
+  box-shadow: none;
+  min-width: 3em;
+  background-color: rgba(173, 216, 230, 0.2);
+  .active-link {
+    background-color: rgba(211, 211, 211, 0.7);
+  }
+}
+
+.sidenav-button-container {
+  overflow: hidden;
+  transition: 250ms ease;
+}

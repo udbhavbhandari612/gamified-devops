@@ -1,0 +1,64 @@
+<div class="d-flex">
+    <div class="w-50 border p-2" style="overflow-x: scroll;">
+        <div class="d-flex flex-column align-items-center">
+            <div class="mat-h2 mt-2 text-center"><span class="p-2 px-3 shadow-sm rounded bg-black text-white">My
+                    Performance</span></div>
+            <ngx-charts-line-chart [view]="mpConfig.view" [scheme]="mpConfig.colorScheme" [legend]="mpConfig.legend"
+                [showXAxisLabel]="mpConfig.showXAxisLabel" [showYAxisLabel]="mpConfig.showYAxisLabel"
+                [xAxis]="mpConfig.xAxis" [yAxis]="mpConfig.yAxis" [xAxisLabel]="mpConfig.xAxisLabel"
+                [yAxisLabel]="mpConfig.yAxisLabel" [timeline]="mpConfig.timeline" [results]="multi">
+            </ngx-charts-line-chart>
+            <div class="mat-h2 mt-n2 border px-3 rounded">User Performance Timeline</div>
+        </div>
+        <div class="d-flex">
+            <div class="d-flex flex-column align-items-center w-50">
+                <img src="../../../assets/images/gauge.png" height="100">
+                <div class="mat-h2 border px-3 rounded">Build Score</div>
+            </div>
+            <div class="d-flex flex-column align-items-center w-50">
+                <img src="../../../assets/images/badge.jpg" height="100">
+                <div class="mat-h2 border px-3 rounded">User Badge</div>
+            </div>
+        </div>
+    </div>
+    <div class="w-50 border p-2" style="overflow-x: scroll;">
+        <div class="mat-h2 mt-2 text-center"><span class="p-2 px-3 shadow-sm rounded bg-black text-white">My Team
+                Performance</span></div>
+        <ngx-charts-bar-horizontal [view]="mtpConfig.view" [scheme]="mtpConfig.colorScheme" [results]="single"
+            [gradient]="mtpConfig.gradient" [xAxis]="mtpConfig.showXAxis" [yAxis]="mtpConfig.showYAxis"
+            [showXAxisLabel]="mtpConfig.showXAxisLabel" [showYAxisLabel]="mtpConfig.showYAxisLabel"
+            [xAxisLabel]="mtpConfig.xAxisLabel" [yAxisLabel]="mtpConfig.yAxisLabel">
+        </ngx-charts-bar-horizontal>
+    </div>
+</div>
+
+<div class="border pt-3">
+    <div class="mat-h2 mb-4 mt-2 text-center"><span class="p-2 px-3 shadow-sm rounded bg-black text-white">My Organization
+            Performance</span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-between">
+                <div class="mat-display-4 text-success fw-bold text-center">80.11%</div>
+                <div class="mat-h2 border px-3 rounded w-100 text-center">DevOps Maturity Percentage</div>
+            </div>
+            <div class="col d-flex flex-column" style="overflow-x: scroll;">
+                <ngx-charts-bar-vertical [view]="mtpConfig2.view" [scheme]="mtpConfig.colorScheme" [results]="single"
+                    [gradient]="mtpConfig.gradient" [xAxis]="mtpConfig.showXAxis" [yAxis]="mtpConfig.showYAxis"
+                    [showXAxisLabel]="mtpConfig.showXAxisLabel" [showYAxisLabel]="mtpConfig.showYAxisLabel"
+                    [xAxisLabel]="mtpConfig.xAxisLabel" [yAxisLabel]="mtpConfig.yAxisLabel">
+                </ngx-charts-bar-vertical>
+                <div class="mat-h2 border px-3 rounded w-100 text-center">User Badges</div>
+            </div>
+            <div class="col d-flex flex-column" style="overflow-x: scroll;">
+                <ngx-charts-line-chart [view]="mpConfig2.view" [scheme]="mpConfig2.colorScheme"
+                    [legend]="mpConfig2.legend" [showXAxisLabel]="mpConfig2.showXAxisLabel"
+                    [showYAxisLabel]="mpConfig2.showYAxisLabel" [xAxis]="mpConfig2.xAxis" [yAxis]="mpConfig2.yAxis"
+                    [xAxisLabel]="mpConfig2.xAxisLabel" [yAxisLabel]="mpConfig2.yAxisLabel"
+                    [timeline]="mpConfig2.timeline" [results]="multi">
+                </ngx-charts-line-chart>
+                <div class="mat-h2 border px-3 rounded w-100 text-center">Organization Performance Timeline</div>
+            </div>
+        </div>
+    </div>
+</div>

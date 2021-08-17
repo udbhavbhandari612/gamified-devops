@@ -1,0 +1,18 @@
+[
+  {
+    "ID": 1,
+    "EMAIL_ID": "pratik.tanwar5@gmail.com",
+    "SCM_SCORE": 7,
+    "DEPLOYMENT_SCORE": 5,
+    "QUALITY_SCORE": -1,
+    "TOTAL_SCORE": 11
+  },
+  {
+    "ID": 2,
+    "EMAIL_ID": "ashwin240298@gmail.com",
+    "SCM_SCORE": 8,
+    "DEPLOYMENT_SCORE": 0,
+    "QUALITY_SCORE": 0,
+    "TOTAL_SCORE": 0
+  }
+]
